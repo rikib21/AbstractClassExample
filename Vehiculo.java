@@ -6,7 +6,7 @@
  * patrón de movimiento.
  */
 
-abstract class Vehiculo {
+abstract class Vehiculo <M>{
     private String id;
 
     public String getId(){
