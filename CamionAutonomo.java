@@ -18,4 +18,6 @@ public class CamionAutonomo extends Vehiculo implements IConectable {
     public void sincronizarGPS() {
         System.out.println("Sincronizando GPS del Camion Autonomo...");
     }   
+    @Override 
+    public void listarVehiculo
 }
