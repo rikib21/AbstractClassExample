@@ -1,9 +1,10 @@
-
+import java.util.*;
 /*
 * Clase que hereda de la clase vehiculo, represe-
 * ta un dron de transporte
 */
 public class DronTransporte extends Vehiculo<String> {
+    private static List<DronTransporte> dronTransporte = new ArrayList<>();
     @Override
     String patronMovimiento() {
         return "Vuelo";
