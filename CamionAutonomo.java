@@ -19,5 +19,6 @@ public class CamionAutonomo extends Vehiculo implements IConectable {
         System.out.println("Sincronizando GPS del Camion Autonomo...");
     }   
     @Override 
-    public void listarVehiculo
+    public List<CamionAutonomo> crearVehiculo(CamionAutonomo v){
+        
 }
