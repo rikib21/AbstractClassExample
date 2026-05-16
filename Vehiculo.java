@@ -7,11 +7,18 @@
  */
 
 abstract class Vehiculo {
-    private int id;
+    private String id;
 
-    public int getId(){
+    public String getId(){
         return id;
     }
     abstract String patronMovimiento();
+    abstract String patronMovimiento();
+
+    abstract List<M> crearVehiculo(M m);
+    abstract void listarVehiculo();
+    abstract M buscarVehiculo(String id);
+    abstract M modificarVehiculo(String id, String nuevoId);
+    abstract List<M> eliminarVehiculo(String id);
     
 }
