@@ -45,8 +45,8 @@ public class CamionAutonomo extends Vehiculo<CamionAutonomo> implements IConecta
         .ifPresent(camion-> camion.setId(nuevoId));
         return existeCamion;
     }
-
-    @Override List<CamionAutonomo> eliminarVehiculo(String id){
+    @Override 
+    public List<CamionAutonomo> eliminarVehiculo(String id){
         CamionAutonomo camion = buscarVehiculo(id);
         Optional.ofNullable(camion)
         .ifPresent(camionT-> camionAutonomo.remove(camionT.getId()));
