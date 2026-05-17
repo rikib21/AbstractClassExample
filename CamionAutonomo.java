@@ -62,7 +62,7 @@ public class CamionAutonomo extends Vehiculo<CamionAutonomo> implements IConecta
             .map(CamionAutonomo::getId)
             .toList();
     }
-    public List<DronTransporte> buscarVehiculoPorTipo(String tipo){
+    public List<DronTransporte> buscarVehiculosPorTipo(String tipo){
         return camionAutonomo.stream()
         .filter(v-> v.patronMovimiento().equalsIgnoreCase(tipo))
         .toList();
