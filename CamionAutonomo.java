@@ -41,7 +41,7 @@ public class CamionAutonomo extends Vehiculo<CamionAutonomo> implements IConecta
     @Override
     public CamionAutonomo modificarVehiculo(String id, String nuevoId){
         CamionAutonomo existeCamion= buscarVehiculo(id);
-         Optional.ofNullable(existeDron)
+         Optional.ofNullable(existeCamion)
         .ifPresent(camion-> camion.setId(nuevoId));
         return existeCamion;
     }
