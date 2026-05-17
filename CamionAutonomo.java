@@ -8,7 +8,7 @@
 
 package POO.ABS;
 
-public class CamionAutonomo extends Vehiculo implements IConectable {
+public class CamionAutonomo extends Vehiculo<CamionAutonomo> implements IConectable {
     private static List<CamionAutonomo> camionAutonomo;
     @Override
     public String patronMovimiento(){
