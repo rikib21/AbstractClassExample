@@ -80,6 +80,16 @@ public class CamionAutonomo extends Vehiculo<CamionAutonomo> implements IConecta
             
     }
 }
+    public Map<String, List<DronTransporte>> clasificarVehiculosPorTipo() {
+        return dronTransporte.stream()
+            .collect(Collectors.groupingBy(DronTransporte::patronMovimiento));
+    }
+    public List<DronTransporte> busquedaAvanzada(String inicialId, String tipo) {
+        return dronTransporte.stream()
+            .filter(dron -> dron.getId().startsWith(inicialId))
+            .filter(dron -> dron.patronMovimiento().equalsIgnoreCase(tipo))
+            .toList();
+    }
     
     
     
