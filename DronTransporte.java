@@ -69,6 +69,10 @@ public class DronTransporte extends Vehiculo<String> {
         .filter(v -> v.patronMovimiento().equalsIgnoreCase(tipo))
         .toList();
     }
+    //Contar Vehiculos
+    public long contarVehiculos() {
+        return dronTransporte.stream().count();
+    }
 
     //Ordenamiento
     public void ordenarVehiculosPorId(){
@@ -80,6 +84,19 @@ public class DronTransporte extends Vehiculo<String> {
         dronTransporte.stream()
         .sorted(Comparator.comparing(DronTransporte::patronMovimiento))
         .forEach(System.out::println);
+    }
+    //Mejora
+    //Clasificación de vehículos agrupándolos por su patrón de movimiento
+    public Map<String, List<DronTransporte>> clasificarVehiculosPorTipo() {
+        return dronTransporte.stream()
+            .collect(Collectors.groupingBy(DronTransporte::patronMovimiento));
+    }
+    //Busqueda Avanzada
+    public List<DronTransporte> busquedaAvanzada(String inicialId, String tipo) {
+        return dronTransporte.stream()
+            .filter(dron -> dron.getId().startsWith(inicialId))
+            .filter(dron -> dron.patronMovimiento().equalsIgnoreCase(tipo))
+            .toList();
     }
 
     
