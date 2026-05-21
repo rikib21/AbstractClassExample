@@ -9,6 +9,16 @@ public class DronTransporte extends Vehiculo<String> {
     String patronMovimiento() {
         return "Vuelo";
     }
+    public DronTransporte(String id,String nombreVehiculo){
+        this.id = id;
+        this.nombreVehiculo = nombreVehiculo;
+    }
+    public void setNombreVehiculo(String nombre){
+        this.nombreVehiculo = nombre;
+    }
+    public String getNombreVehiculo(){
+        return this.nombreVehiculo;
+    }
     @Override
     public List<DronTransporte> crearVehiculo(DronTransporte v){
         dronTransporte.add(v);
